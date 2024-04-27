@@ -8,6 +8,8 @@ import ErrorElement from "../components/ErrorElement";
 import AllCraft from "../page/AllCraft";
 import MyList from "../page/MyList";
 import AddCraft from "../page/AddCraft";
+import Login from "../page/Login";
+import Register from "../page/Register";
 
   const router = createBrowserRouter([
     {
@@ -30,6 +32,14 @@ import AddCraft from "../page/AddCraft";
         {
             path:'/myList',
             element: <MyList/>
+        },
+        {
+            path: '/login',
+            element: <Login/>
+        },
+        {
+            path:'/register',
+            element: <Register/>
         }
       ]
     },
