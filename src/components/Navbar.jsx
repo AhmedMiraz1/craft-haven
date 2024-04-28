@@ -2,6 +2,9 @@ import { Link, NavLink } from "react-router-dom";
 import "animate.css";
 import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../provider/AuthProvider";
+import { Tooltip } from "react-tooltip";
+import { VscDiffRenamed } from "react-icons/vsc";
+import { CiLogout } from "react-icons/ci";
 
 const Navbar = () => {
   const { logOut, user } = useContext(AuthContext);
@@ -82,7 +85,7 @@ const Navbar = () => {
           to="/"
           className="btn btn-ghost text-lg md:text-xl lg:text-2xl flex gap-0 text-primary font-medium md:font-semibold lg:font-extrabold  animate__animated animate__zoomIn animate__delay-2000"
         >
-          CraftHaven <span className="text-pink-500">Creations</span>
+          Craft<span className="text-pink-500">Haven</span>
         </Link>
       </div>
       <div className="navbar-center hidden md:flex">
@@ -132,19 +135,36 @@ const Navbar = () => {
       </div>
 
       <div className="navbar-end">
-        {user?.email ? (
+        {/* {user?.email ? (
           <button
-          onClick={logOut}
-           className="btn bg-blue-100 text-green-700 border-none btn-outline text-lg md:text-xl lg:text-2xl md:font-bold">Log Out</button>
+            onClick={logOut}
+            className="btn bg-blue-100 text-green-700 border-none btn-outline text-sm md:text-xl lg:text-2xl md:font-bold"
+          >
+            Log out
+          </button>
         ) : (
           <Link
             to="/login"
             className="btn bg-blue-100 border-none btn-outline text-lg md:text-xl lg:text-2xl md:font-bold text-red-600"
           >
-            Log In
+            
           </Link>
         )}
-        {/* {
+
+        {user && (
+          <div>
+            <img
+              className="rounded-full btn-circle avatar btn btn-ghost w-12 ml-4  "
+              src={
+                user?.photoURL ||
+                "https://i.ibb.co/YfrC5vT/user-removebg-preview.png"
+              }
+              alt=""
+            />
+           
+          </div>
+        )} */}
+        {
             user? <div className="dropdown dropdown-end">
               <label tabIndex={0} className="btn btn-ghost btn-circle avatar ">
                 <div className="w-10 rounded-full">
@@ -157,12 +177,7 @@ const Navbar = () => {
                 <li  className="border px-6 py-2  rounded-xl flex flex-row ">
                  <button className="btn btn-sm btn-ghost "> <span><VscDiffRenamed /></span>{user?.displayName || "User Not found"} </button>
                 </li>
-                <li className="my-4  border px-6 py-2  rounded-xl flex flex-row">
-                  <Link to="/updateProfile" className="btn btn-sm btn-ghost  "><span><MdOutlineUpdate/></span>
-                    Update profile
-
-                  </Link>
-                </li>
+               
                 <li  className="border px-6 py-2 rounded-xl">
                  <button onClick={logOut}
                   className="btn btn-sm btn-ghost "> <span><CiLogout /></span>Logout </button>
@@ -172,16 +187,14 @@ const Navbar = () => {
 
             </div>
             :
-            <Link to= '/login' className="btn bg-blue-100 border-none btn-outline text-lg md:text-xl lg:text-2xl md:font-bold">LogIn</Link>
-          } */}
-        {/* <Link
-          to="/login"
-          className="btn bg-blue-100 border-none btn-outline text-lg md:text-xl lg:text-2xl md:font-bold"
-        >
-          LogIn
-        </Link> */}
+           <div className="flex gap-0">
+             <Link to= '/login' className="btn bg-blue-100 border-none btn-outline text-sm md:text-xl lg:text-2xl md:font-bold">LogIn</Link>
+             <Link to= '/register' className="btn bg-blue-100 border-none btn-outline text-sm md:text-xl lg:text-2xl md:font-bold">Register</Link>
+            
+           </div>
+          }
 
-        <label className="cursor-pointer grid place-items-center ml-4">
+        <label className="cursor-pointer grid place-items-center ml-1 md:ml-4">
           <input
             onChange={handelToggle}
             type="checkbox"
@@ -206,7 +219,7 @@ const Navbar = () => {
           <svg
             className="col-start-2 row-start-1 stroke-base-100 fill-base-100"
             xmlns="http://www.w3.org/2000/svg"
-            width="14"
+            width="12"
             height="14"
             viewBox="0 0 24 24"
             fill="none"

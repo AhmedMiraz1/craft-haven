@@ -10,6 +10,7 @@ import MyList from "../page/MyList";
 import AddCraft from "../page/AddCraft";
 import Login from "../page/Login";
 import Register from "../page/Register";
+import PrivateRoute from "../privateRoute/PrivateRoute";
 
   const router = createBrowserRouter([
     {
@@ -27,11 +28,11 @@ import Register from "../page/Register";
         },
         {
             path:'/addCraft',
-            element: <AddCraft/>
+            element: <PrivateRoute><AddCraft/></PrivateRoute>
         },
         {
             path:'/myList',
-            element: <MyList/>
+            element: <PrivateRoute><MyList/></PrivateRoute>
         },
         {
             path: '/login',

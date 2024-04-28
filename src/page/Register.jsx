@@ -59,11 +59,12 @@ const Register = () => {
     createUser(email, password)
       .then((result) => {
 
-        // update profile 
-        // updateUserProfile(name, photo)
-        // .then(() => {
-        //   navigate("/");
-        // });
+        //update profile
+         
+        updateUserProfile(name, photo)
+        .then(() => {
+          navigate("/");
+        });
 
         const user = result.user;
         console.log(user);
