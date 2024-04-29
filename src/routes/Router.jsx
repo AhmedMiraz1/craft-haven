@@ -12,6 +12,7 @@ import Login from "../page/Login";
 import Register from "../page/Register";
 import PrivateRoute from "../privateRoute/PrivateRoute";
 import CategoryDetails from "../page/CategoryDetails";
+import UpdateCraft from "../page/UpdateCraft";
 
   const router = createBrowserRouter([
     {
@@ -50,6 +51,11 @@ import CategoryDetails from "../page/CategoryDetails";
             element: <PrivateRoute><CategoryDetails/></PrivateRoute>,
             loader: ({params}) => fetch(`http://localhost:5000/artCraft/${params.id}`)
 
+        }, 
+        {
+          path:'/updateCraft/:id',
+          element:<UpdateCraft/>,
+          loader: ({params}) => fetch(`http://localhost:5000/artCraft/${params.id}`)
         }
       ]
     },

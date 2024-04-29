@@ -58,7 +58,7 @@ const CraftCard = ({craftCard}) => {
             </div>
             </div>
             <div className="flex flex-col justify-center gap-6">
-                <Link className="text-white btn btn-outline bg-green-500"><FaEdit/></Link>
+                <Link to={`/updateCraft/${_id}`} className="text-white btn btn-outline bg-green-500"><FaEdit/></Link>
                 <button onClick={()=>handelDelete(_id)}>
                 <Link className="text-white btn btn-outline bg-red-500"> <FaDeleteLeft/></Link>
                 </button>
