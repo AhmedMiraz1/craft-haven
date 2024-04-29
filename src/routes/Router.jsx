@@ -54,7 +54,7 @@ import UpdateCraft from "../page/UpdateCraft";
         }, 
         {
           path:'/updateCraft/:id',
-          element:<UpdateCraft/>,
+          element:<PrivateRoute><UpdateCraft/></PrivateRoute>,
           loader: ({params}) => fetch(`http://localhost:5000/artCraft/${params.id}`)
         }
       ]

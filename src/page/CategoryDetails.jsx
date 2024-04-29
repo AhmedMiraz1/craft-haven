@@ -5,7 +5,7 @@ import { useLoaderData } from "react-router-dom";
 const CategoryDetails = () => {
 
     const artCraft = useLoaderData()
-    const  {image, itemName, subcategoryName, price, shortDescription, rating, customization, processingTime, stockStatus, userEmail, userName}= artCraft
+    const  {image, itemName, subcategoryName, price, shortDescription, rating, customization, processingTime, stockStatus,}= artCraft
     return (
         <div className="my-24 ">
             <h1  className="text-center  text-2xl md:text-3xl lg:text-4xl font-bold text-green-500">Art & Craft Details  </h1>

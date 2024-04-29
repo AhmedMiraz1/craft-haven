@@ -2,7 +2,6 @@ import { Link, NavLink } from "react-router-dom";
 import "animate.css";
 import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../provider/AuthProvider";
-import { Tooltip } from "react-tooltip";
 import { VscDiffRenamed } from "react-icons/vsc";
 import { CiLogout } from "react-icons/ci";
 
