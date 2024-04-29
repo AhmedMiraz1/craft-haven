@@ -1,9 +1,13 @@
+import Swal from "sweetalert2";
+
 const AddCraft = () => {
 
     const handelAddArtAndCraft = event => {
         event.preventDefault()
+      
 
         const form = event.target;
+       
         const image = form.image.value;
         const itemName = form.itemName.value;
         const subcategoryName = form.subcategoryName.value;
@@ -15,8 +19,29 @@ const AddCraft = () => {
         const stockStatus = form.stockStatus.value;
         const userEmail = form.userEmail.value;
         const userName = form.userName.value;
+        event.target.reset()
         const newArtAndCraft = {image, itemName, subcategoryName, price, shortDescription, rating, customization, processingTime, stockStatus, userEmail, userName};
         console.log(newArtAndCraft);
+
+        fetch('http://localhost:5000/artCraft',{
+            method: 'POST',
+            headers: {
+                'content-type': "application/json"
+            }, 
+            body: JSON.stringify(newArtAndCraft)
+        } )
+        .then(res => res.json())
+        .then(data => {
+            console.log(data);
+            if(data.insertedId){
+                Swal.fire({
+                    title: 'success',
+                    text: 'Item added successfully',
+                    icon: 'success',
+                    confirmButtonText: 'Ok'
+                  })
+            }
+        })
     }
   return (
     <div className="my-24 p-8 bg-[#F4F3F0] rounded-lg">

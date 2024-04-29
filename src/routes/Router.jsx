@@ -11,6 +11,7 @@ import AddCraft from "../page/AddCraft";
 import Login from "../page/Login";
 import Register from "../page/Register";
 import PrivateRoute from "../privateRoute/PrivateRoute";
+import CategoryDetails from "../page/CategoryDetails";
 
   const router = createBrowserRouter([
     {
@@ -24,7 +25,8 @@ import PrivateRoute from "../privateRoute/PrivateRoute";
         },
         {
             path:'/allCraft',
-            element: <AllCraft/>
+            element: <AllCraft/>,
+            loader: ()=> fetch('http://localhost:5000/artCraft')
         },
         {
             path:'/addCraft',
@@ -41,6 +43,11 @@ import PrivateRoute from "../privateRoute/PrivateRoute";
         {
             path:'/register',
             element: <Register/>
+        },
+        {
+            path:'/categoryDetails',
+            element: <CategoryDetails/>
+
         }
       ]
     },
