@@ -30,7 +30,7 @@ const AllCraft = () => {
         <td>{craftItem?.subcategoryName}</td>
         <td>{craftItem?.customization}</td>
         <td>
-          <Link to="/categoryDetails" className="btn text-white bg-green-600 font-bold text-sm md:text-xl lg:text-2xl">
+          <Link to={`/categoryDetails/${craftItem._id}`} className="btn text-white bg-green-600 font-bold text-sm md:text-xl lg:text-2xl">
             View details
           </Link>
         </td>

@@ -46,7 +46,7 @@ const AddCraft = () => {
   return (
     <div className="my-24 p-8 bg-[#F4F3F0] rounded-lg">
 
-        <h2 className="text-center  my-6 text-2xl md:text-3xl lg:text-4xl font-bold text-green-500">Add Art and Craft</h2>
+        <h2 className="text-center  my-6 text-2xl md:text-3xl lg:text-4xl font-bold text-green-500">Add Art &Craft</h2>
         <p className=" text-lg md:text-xl font-medium text-center mb-12 text-green-500">Unleash your creativity through a symphony of colors and textures, crafting beauty with your own hands. Explore the boundless realm of imagination, where every stroke tells a story and every creation reflects your unique vision.</p>
      <form onSubmit={handelAddArtAndCraft} >
 

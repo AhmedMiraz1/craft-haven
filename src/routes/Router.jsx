@@ -34,7 +34,8 @@ import CategoryDetails from "../page/CategoryDetails";
         },
         {
             path:'/myList',
-            element: <PrivateRoute><MyList/></PrivateRoute>
+            element: <PrivateRoute><MyList/></PrivateRoute>,
+            loader: () => fetch('http://localhost:5000/artCraft')
         },
         {
             path: '/login',
@@ -45,8 +46,9 @@ import CategoryDetails from "../page/CategoryDetails";
             element: <Register/>
         },
         {
-            path:'/categoryDetails',
-            element: <CategoryDetails/>
+            path:'/categoryDetails/:id',
+            element: <PrivateRoute><CategoryDetails/></PrivateRoute>,
+            loader: ({params}) => fetch(`http://localhost:5000/artCraft/${params.id}`)
 
         }
       ]
