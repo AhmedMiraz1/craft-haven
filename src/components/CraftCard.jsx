@@ -20,11 +20,21 @@ const CraftCard = ({craftCard}) => {
             confirmButtonText: "Yes, delete it!"
           }).then((result) => {
             if (result.isConfirmed) {
-              Swal.fire({
-                title: "Deleted!",
-                text: "Your file has been deleted.",
-                icon: "success"
-              });
+            // 
+            fetch(`http://localhost:5000/artCraft/${_id}`,{
+                method: 'DELETE'
+            })
+            .then(res => res.json())
+            .then(data => {
+                console.log(data);
+                if(data.deleteCount > 0){
+                    Swal.fire({
+                            title: "Deleted!",
+                            text: "Your item has been deleted.",
+                            icon: "success"
+                          });
+                }
+            })
             }
           });
 
