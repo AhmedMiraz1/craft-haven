@@ -6,11 +6,8 @@ import PropTypes from "prop-types";
 
 
 const CraftCard = ({ craftCard, craftCards, setCraftCards }) => {
-  console.log("eee", setCraftCards);
-
-
-
  
+
   const {
     _id,
     image,
