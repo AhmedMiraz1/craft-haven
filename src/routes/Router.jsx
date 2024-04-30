@@ -68,7 +68,7 @@ const router = createBrowserRouter([
           </PrivateRoute>
         ),
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/artCraft/${params.id}`),
+          fetch(`https://art-craft-server-sable.vercel.app/artCraft/${params.id}`),
       },
       {
         path: "/updateCraft/:id",
@@ -78,7 +78,7 @@ const router = createBrowserRouter([
           </PrivateRoute>
         ),
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/artCraft/${params.id}`),
+          fetch(`https://art-craft-server-sable.vercel.app/artCraft/${params.id}`),
       },
     ],
   },
