@@ -1,13 +1,13 @@
 import { useLoaderData } from "react-router-dom";
 import Banner from "../components/Banner";
 import CraftItem from "../components/CraftItem";
+import CraftMedia from "../components/CraftMedia";
 
 
 
 const Home = () => {
 
     const craftItems = useLoaderData()
-    console.log(craftItems);
     return (
         <div>
 
@@ -23,8 +23,27 @@ const Home = () => {
                     craftItems?.map(craft => <CraftItem key={craft._id} craft={craft}/>)
                 }
             </div>
+
+
+            <div className="my-24">
+
+                <h1 className="text-center font-bold text-2xl md:text-3xl lg:text-4xl text-red-400"> Where Creativity and Community Collide</h1>
+                <p className="my-6 text-center font-medium text-lg md:text-xl  text-red-400">Join our vibrant Art & CraftHaven community, where inspiration flows and imaginations soar. Dive into a world of endless possibilities, connect with fellow artisans, and embark on a journey of artistic exploration.</p>
+                <CraftMedia/>
+            </div>
         </div>
     );
 };
 
 export default Home;
+
+
+
+
+
+
+
+
+
+
+
