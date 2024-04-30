@@ -4,6 +4,7 @@ import AOS from 'aos';
 import 'aos/dist/aos.css'; // You can also use <link> for styles
 // ..
 AOS.init();
+import PropTypes from 'prop-types';
 
 
 const CraftItem = ({craft}) => {
@@ -35,3 +36,7 @@ const CraftItem = ({craft}) => {
 };
 
 export default CraftItem;
+
+CraftItem.propTypes ={
+  craft:PropTypes.object
+}

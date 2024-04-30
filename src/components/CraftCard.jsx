@@ -61,7 +61,7 @@ const CraftCard = ({ craftCard, craftCards, setCraftCards }) => {
     <div>
 
 
-      <div data-aos="zoom-in-down"  data-aos-duration="1000" className="w-full h-full p-4 shadow-2xl rounded-lg flex justify-between gap-5">
+      <div data-aos="zoom-in-down"  data-aos-duration="1000" className="w-full h-full p-4 shadow-2xl rounded-lg flex flex-col md:flex-row justify-between gap-5">
         <div>
           <img className="h-full w-full lg:w-60" src={image} alt="" />
         </div>
@@ -105,7 +105,7 @@ const CraftCard = ({ craftCard, craftCards, setCraftCards }) => {
             <FaEdit />
           </Link>
           <button onClick={() => handelDelete(_id)}>
-            <Link className="text-white btn btn-outline bg-red-500">
+            <Link className="text-white btn btn-outline bg-red-500 w-full ">
               {" "}
               <FaDeleteLeft />
             </Link>

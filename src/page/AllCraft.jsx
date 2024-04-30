@@ -15,7 +15,7 @@ const AllCraft = () => {
      <div>
 
             
-<div data-aos="zoom-in-down"  data-aos-duration="1000" className="overflow-x-auto">
+<div data-aos="zoom-in-down"  data-aos-duration="1000" className="overflow-x-auto  shadow-lg">
 <table className="table ">
 {/* head */}
 <thead>

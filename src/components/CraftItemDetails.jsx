@@ -18,7 +18,7 @@ const CraftItemDetails = () => {
         <p className="text-lg md:text-xl font-medium text-center mt-6 mb-12 text-stone-300">Intricate art and craft pieces meticulously crafted with attention to detail, showcasing exquisite craftsmanship and creativity.</p>
         <div className="flex flex-col md:flex-row  w-full gap-6 bg-[#F4F3F0] rounded-lg p-3 md:p-8 ">
 
-            <div data-aos="fade-right" data-aos-duration="2000" className="w-full  "><img className="rounded-xl h-[50vh] w-full" src={image} alt="" /></div>
+            <div data-aos="fade-right" data-aos-duration="2000" className="w-full  "><img className="rounded-xl h-full md:h-[50vh] w-full" src={image} alt="" /></div>
             <div data-aos="fade-left" data-aos-duration="2000" className="w-full">
              <h2 className="text-xl md:text-2xl lg:text-3xl font-bold ">{subcategoryName}</h2>
              <h3 className="my-6 text-lg md:text-xl lg:text-2xl font-bold">{itemName}</h3>
