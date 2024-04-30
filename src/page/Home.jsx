@@ -2,7 +2,7 @@ import { useLoaderData } from "react-router-dom";
 import Banner from "../components/Banner";
 import CraftItem from "../components/CraftItem";
 import CraftMedia from "../components/CraftMedia";
-import SocialMedia from "../components/SocialMedia";
+import Blogs from "../components/Blogs";
 
 
 
@@ -37,7 +37,7 @@ const Home = () => {
             <div className="my-24 ">
                 <h1 className="text-center font-bold text-2xl md:text-3xl lg:text-4xl text-red-400"> Explore Creativity, Discover Inspiration.</h1>
                 <p className="my-6 text-center font-medium text-lg md:text-xl  text-red-400">Feel the pulse of creativity with our curated content and join a community of passionate artisans.</p>
-                <SocialMedia/>
+                <Blogs/>
             </div>
         </div>
     );

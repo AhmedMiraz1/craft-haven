@@ -3,9 +3,15 @@ import { FaDeleteLeft } from "react-icons/fa6";
 import { Link } from "react-router-dom";
 import Swal from "sweetalert2";
 import PropTypes from "prop-types";
+import AOS from 'aos';
+import 'aos/dist/aos.css'; // You can also use <link> for styles
+// ..
+AOS.init();
 
 
 const CraftCard = ({ craftCard, craftCards, setCraftCards }) => {
+
+  console.log(craftCards);
  
 
   const {
@@ -55,7 +61,7 @@ const CraftCard = ({ craftCard, craftCards, setCraftCards }) => {
     <div>
 
 
-      <div className="w-full h-full p-4 shadow-2xl rounded-lg flex justify-between gap-5">
+      <div data-aos="zoom-in-down"  data-aos-duration="1000" className="w-full h-full p-4 shadow-2xl rounded-lg flex justify-between gap-5">
         <div>
           <img className="h-full w-full lg:w-60" src={image} alt="" />
         </div>

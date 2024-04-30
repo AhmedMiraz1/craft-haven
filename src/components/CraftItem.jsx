@@ -1,5 +1,9 @@
 import { FaStar } from "react-icons/fa";
 import { Link } from "react-router-dom";
+import AOS from 'aos';
+import 'aos/dist/aos.css'; // You can also use <link> for styles
+// ..
+AOS.init();
 
 
 const CraftItem = ({craft}) => {
@@ -10,7 +14,7 @@ const CraftItem = ({craft}) => {
 
   return (
     <div>
-      <div className="card h-full bg-base-100 shadow-xl">
+      <div data-aos="zoom-in-down"  data-aos-duration="1000" className="card h-full bg-base-100 shadow-xl">
         <figure>
           <img className="h-full md:h-[30vh]" src={image} alt="" />
         </figure>

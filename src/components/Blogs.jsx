@@ -1,10 +1,15 @@
 import image from '../assets/jo-szczepanska-9OKGEVJiTKk-unsplash.jpg'
 
+import AOS from 'aos';
+import 'aos/dist/aos.css'; // You can also use <link> for styles
+// ..
+AOS.init();
 
-const SocialMedia = () => {
+
+const Blogs = () => {
   return (
-    <div className='flex justify-between bg-slate-100 p-5 md:p-8 gap-8  rounded-lg'>
-      <div className="  w-[50%] text-lg md:text-xl text-amber-500 font-medium">
+    <div className='flex flex-col-reverse md:flex-row justify-between bg-slate-100 p-5 md:p-8 gap-8  rounded-lg'>
+      <div data-aos="fade-right" data-aos-duration="2000" className="  w-[50%] text-lg md:text-xl text-amber-500 font-medium">
         Welcome to the Art & CraftHaven blog, your go-to resource for all things
         art, crafting, and creativity! Here, we invite you to immerse yourself
         in a world of inspiration, innovation, and imagination. Our diverse team
@@ -25,11 +30,11 @@ const SocialMedia = () => {
         on art history and design theory, there  always something new to
         discover on the Art & CraftHaven blog.
       </div>
-      <div className='w-[50%]' >
+      <div data-aos="fade-left" data-aos-duration="2000" className='w-[50%]' >
         <img className='rounded-xl' src={image} alt="" />
       </div>
     </div>
   );
 };
 
-export default SocialMedia;
+export default Blogs;

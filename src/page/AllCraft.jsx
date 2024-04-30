@@ -1,4 +1,8 @@
 import { Link, useLoaderData } from "react-router-dom";
+import AOS from 'aos';
+import 'aos/dist/aos.css'; // You can also use <link> for styles
+// ..
+AOS.init();
 
 
 const AllCraft = () => {
@@ -11,7 +15,7 @@ const AllCraft = () => {
      <div>
 
             
-<div className="overflow-x-auto">
+<div data-aos="zoom-in-down"  data-aos-duration="1000" className="overflow-x-auto">
 <table className="table ">
 {/* head */}
 <thead>
