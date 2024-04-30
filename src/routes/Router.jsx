@@ -22,18 +22,18 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <Home />,
-        loader: () => fetch("http://localhost:5000/artCraft"),
+        loader: () => fetch("https://art-craft-server-sable.vercel.app/artCraft"),
       },
 
       {
         path: "/craftItemDetails/:id",
         element:  <CraftItemDetails />,
-        loader: ({ params }) =>fetch(`http://localhost:5000/artCraft/${params.id}`),
+        loader: ({ params }) =>fetch(`https://art-craft-server-sable.vercel.app/artCraft/${params.id}`),
       },
       {
         path: "/allCraft",
         element: <AllCraft />,
-        loader: () => fetch("http://localhost:5000/artCraft"),
+        loader: () => fetch("https://art-craft-server-sable.vercel.app/artCraft"),
       },
       {
         path: "/addCraft",
@@ -50,7 +50,7 @@ const router = createBrowserRouter([
             <MyList />
           </PrivateRoute>
         ),
-        loader: () => fetch("http://localhost:5000/artCraft"),
+        loader: () => fetch("https://art-craft-server-sable.vercel.app/artCraft"),
       },
       {
         path: "/login",

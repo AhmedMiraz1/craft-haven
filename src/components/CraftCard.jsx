@@ -38,7 +38,7 @@ const CraftCard = ({ craftCard, craftCards, setCraftCards }) => {
     }).then((result) => {
       if (result.isConfirmed) {
         //
-        fetch(`http://localhost:5000/artCraft/${_id}`, {
+        fetch(`https://art-craft-server-sable.vercel.app/artCraft${_id}`, {
           method: "DELETE",
         })
           .then((res) => res.json())

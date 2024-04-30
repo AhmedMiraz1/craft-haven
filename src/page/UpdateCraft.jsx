@@ -27,7 +27,7 @@ const UpdateCraft = () => {
         const UpdatedArtAndCraft = {image, itemName, subcategoryName, price, shortDescription, rating, customization, processingTime, stockStatus};
         console.log(UpdatedArtAndCraft);
 
-        fetch(`http://localhost:5000/artCraft/${_id}`,{
+        fetch(`https://art-craft-server-sable.vercel.app/artCraft/${_id}`,{
             method: 'PUT',
             headers: {
                 'content-type': "application/json"

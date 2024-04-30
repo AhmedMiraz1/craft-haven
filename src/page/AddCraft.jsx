@@ -23,7 +23,7 @@ const AddCraft = () => {
         const newArtAndCraft = {image, itemName, subcategoryName, price, shortDescription, rating, customization, processingTime, stockStatus, userEmail, userName};
         console.log(newArtAndCraft);
 
-        fetch('http://localhost:5000/artCraft',{
+        fetch('https://art-craft-server-sable.vercel.app/artCraft',{
             method: 'POST',
             headers: {
                 'content-type': "application/json"
